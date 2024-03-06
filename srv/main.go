@@ -21,8 +21,8 @@ func main() {
 	c.Start()
 
 	r := gin.Default()
-	r.GET("/meetingstate", func(c *gin.Context) {
-		c.JSON(200, gin.H{
+	r.GET("/meetingstate", func(ctx *gin.Context) {
+		ctx.JSON(200, gin.H{
 			"camera":     isCameraOn,
 			"microphone": isMicrophoneOn,
 		})
